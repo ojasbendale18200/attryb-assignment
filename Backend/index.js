@@ -2,14 +2,18 @@ const express = require('express');
 const cors = require('cors');
 const { connection } = require('./db');
 const { auth } = require('./routes/auth.routes');
-require('dotenv').config();
+const { authentication } = require("./middlewares/auth.middleware");
+const { oem } = require("./routes/oem.routes");
+require("dotenv").config();
 const app = express();
 
-app.use(cors())
+app.use(cors());
 
 app.use(express.json());
 
-app.use('/auth', auth);
+app.use("/auth", auth);
+
+app.use("/oem", authentication, oem);
 
 
 

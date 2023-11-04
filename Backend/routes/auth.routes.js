@@ -47,7 +47,17 @@ auth.post('/login', async(req, res)=>{
                 const {password:hash, _id, username} = user[0];
                 bcrypt.compare(password, hash, function(err, result) {
                     if(result){
-                        res.status(200).send({id:_id,username, email, token:'Bearer '+jwt.sign({ userid: _id }, process.env.jwtSecret) })
+                        res
+                          .status(200)
+                          .send({
+                            id: _id,
+                            username,
+                            email,
+                            token: jwt.sign(
+                              { userid: _id },
+                              process.env.jwtSecret
+                            ),
+                          });
                         
                     }else {
                         res.status(401).send({'msg':"Wrong Credentials Provided"});
