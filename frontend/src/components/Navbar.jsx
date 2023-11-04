@@ -63,7 +63,7 @@ const Navbar = () => {
             color={"#003a5e"}
             display={"inline"}
           >
-            BuyCar
+            CarDekho
           </Text>
         </Flex>
         <Box display={{ base: "none", md: "block" }}>
@@ -239,12 +239,12 @@ function AlertDialogExample({ value }) {
           width="24"
           height="24"
           viewBox="0 0 24 24"
-          fill={"white"}
+          fill={"black"}
         >
           <path d="M16 10v-5l8 7-8 7v-5h-8v-4h8zm-16-8v20h14v-2h-12v-16h12v-2h-14z" />
         </svg>
 
-        <Text display={value ? "block" : "none"} color={"white"} ml={"10px"}>
+        <Text display={value ? "block" : "none"} color={"black"} ml={"10px"}>
           Logout
         </Text>
       </Flex>
@@ -255,7 +255,7 @@ function AlertDialogExample({ value }) {
         onClose={onClose}
       >
         <AlertDialogOverlay>
-          <AlertDialogContent color={"white"} bg={"white"}>
+          <AlertDialogContent color={"black"} bg={"white"}>
             <AlertDialogHeader fontSize="lg" fontWeight="bold">
               Log Out
             </AlertDialogHeader>

@@ -27,7 +27,7 @@ export default function DeleteAlert({ delete_item, id }) {
         onClose={onClose}
       >
         <AlertDialogOverlay>
-          <AlertDialogContent color={"black"} bg={"black"}>
+          <AlertDialogContent color={"black"} bg={"white"}>
             <AlertDialogHeader fontSize="lg" fontWeight="bold">
               Delete Item
             </AlertDialogHeader>
@@ -57,3 +57,7 @@ export default function DeleteAlert({ delete_item, id }) {
     </>
   );
 }
+
+
+
+

@@ -112,7 +112,7 @@ const Filter = ({ item }) => {
         mt="30px"
         justifyContent={"space-between"}
         alignItems={"center"}
-        color={"#eeeeee"}
+        color={"#003a5e"}
       >
         <Flex justifyContent={"space-between"} alignItems={"center"}>
           <Text
@@ -176,13 +176,13 @@ const Filter = ({ item }) => {
           });
         }}
       >
-        <option value="silver">Silver</option>
-        <option value="black">Black</option>
-        <option value="gray">Gray</option>
-        <option value="yellow">Yellow</option>
-        <option value="red">Red</option>
-        <option value="blue">Blue</option>
-        <option value="white">White</option>
+        <option value="Silver">Silver</option>
+        <option value="Black">Black</option>
+        <option value="Gray">Gray</option>
+        <option value="Yellow">Yellow</option>
+        <option value="Red">Red</option>
+        <option value="Blue">Blue</option>
+        <option value="White">White</option>
       </Select>
       <Button
         color={"#eeee"}
