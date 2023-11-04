@@ -4,6 +4,7 @@ const { connection } = require('./db');
 const { auth } = require('./routes/auth.routes');
 const { authentication } = require("./middlewares/auth.middleware");
 const { oem } = require("./routes/oem.routes");
+const { inventory } = require("./routes/inventory.routes");
 require("dotenv").config();
 const app = express();
 
@@ -14,6 +15,8 @@ app.use(express.json());
 app.use("/auth", auth);
 
 app.use("/oem", authentication, oem);
+
+app.use("/inventory", authentication, inventory);
 
 
 
