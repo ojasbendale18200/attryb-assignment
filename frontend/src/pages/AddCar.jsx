@@ -45,6 +45,8 @@ const init = {
 };
 
 function AddCar() {
+  axios_create.defaults.headers.common["Authorization"] =
+    sessionStorage.getItem("token");
   const [item, setitem] = useState(init);
   const inputRef = useRef();
   const [oemdata, set_oemdata] = useState([]);

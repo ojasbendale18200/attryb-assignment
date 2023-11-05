@@ -40,6 +40,8 @@ import DeleteAlert from "../components/DeleteAlert";
 
 
 function Deals() {
+  axios_create.defaults.headers.common["Authorization"] =
+    sessionStorage.getItem("token");
   const [data, setdata] = useState([]);
   const [loading, setloading] = useState(false);
   const [userid, setuserid] = useState("");

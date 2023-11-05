@@ -11,6 +11,7 @@ import {
 } from "@chakra-ui/react";
 
 const Filter = ({ item }) => {
+  
   const { filter, setfilter, fetchData, page, limit, value } = item;
 
   function outter(timer) {
