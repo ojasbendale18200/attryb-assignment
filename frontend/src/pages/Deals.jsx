@@ -37,7 +37,7 @@ import axios_create from "../utils/axios_instance";
 import DrawerFilter from "../components/DrawerFilter";
 import Filter from "../components/Filter";
 import DeleteAlert from "../components/DeleteAlert";
-import SingleCarComponent from "../components/SingleCarComponent";
+
 
 function Deals() {
   const [data, setdata] = useState([]);
