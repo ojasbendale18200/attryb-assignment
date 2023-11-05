@@ -66,8 +66,6 @@ const Login = () => {
   }
 
   return (
- 
-
     <Box
       w={{ base: "90%", md: "70%", lg: "50%", xl: "30%" }}
       m="3rem auto"
@@ -137,7 +135,7 @@ const Login = () => {
                   fontWeight: "bold",
                 }}
               >
-                Login
+                SignUp
               </Link>
             </Box>
           </Flex>

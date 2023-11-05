@@ -6,12 +6,9 @@ import {
   Grid,
   GridItem,
   Image,
-  Input,
-  InputGroup,
-  InputRightElement,
-  Select,
   Text,
   useToast,
+  Spinner,
   Modal,
   ModalOverlay,
   ModalContent,
@@ -26,7 +23,9 @@ import {
   InputLeftAddon,
   UnorderedList,
   InputRightAddon,
-  Spinner,
+  InputGroup,
+  Input,
+  Select,
 } from "@chakra-ui/react";
 import React, { useContext, useEffect, useRef, useState } from "react";
 
@@ -38,10 +37,9 @@ import axios_create from "../utils/axios_instance";
 import DrawerFilter from "../components/DrawerFilter";
 import Filter from "../components/Filter";
 import DeleteAlert from "../components/DeleteAlert";
+import SingleCarComponent from "../components/SingleCarComponent";
 
 function Deals() {
-  axios_create.defaults.headers.common["Authorization"] =
-    sessionStorage.getItem("token");
   const [data, setdata] = useState([]);
   const [loading, setloading] = useState(false);
   const [userid, setuserid] = useState("");
@@ -300,7 +298,6 @@ function Deals() {
                                 return (
                                   <Box
                                     display={"inline-flex"}
-                                    borderRadius={"50%"}
                                     m="10px"
                                     w="20px"
                                     h="20px"
@@ -361,8 +358,7 @@ function Deals() {
               </Button>
             }
 
-            {/* render the buttons here, directly. Ensure, each button has the "data-testid='btn'" prop. Add the className, activeBtn, if the current button is the activePage*/}
-
+         
             <Button m="9px">{page}</Button>
 
             {
@@ -392,8 +388,6 @@ function Deals() {
 export default Deals;
 
 function BasicUsage({ data, update_date }) {
-  axios_create.defaults.headers.common["Authorization"] =
-    sessionStorage.getItem("token");
   const { isOpen, onOpen, onClose } = useDisclosure();
   const [item, setitem] = useState(data);
   const inputRef = useRef();
@@ -481,7 +475,7 @@ function BasicUsage({ data, update_date }) {
   }
   return (
     <>
-      <Button size={"sm"} onClick={onOpen}>
+      <Button size={"sm"} onClick={onOpen} px={"30px"}>
         Edit
       </Button>
 
@@ -553,8 +547,8 @@ function BasicUsage({ data, update_date }) {
                       borderRadius={"10px"}
                       justifyContent={"space-between"}
                       p="7px"
-                      bg="pink.400"
-                      color={"#eeee"}
+                      bg="blue.600"
+                      color={"white"}
                     >
                       {el.length >= 20
                         ? [...el].splice(0, 20).join("") + "..."
@@ -845,7 +839,6 @@ function BasicUsage({ data, update_date }) {
               colorScheme="none"
               color={"#white"}
               variant="outline"
-             
             >
               Done{" "}
               <Spinner
@@ -861,3 +854,8 @@ function BasicUsage({ data, update_date }) {
     </>
   );
 }
+  
+
+  
+
+

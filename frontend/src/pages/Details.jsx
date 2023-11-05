@@ -213,7 +213,7 @@ function Details() {
                 return (
                   <Box
                     display={"inline-flex"}
-                    borderRadius={"50%"}
+                    borderRadius={0}
                     m="10px"
                     w="30px"
                     h="30px"
@@ -260,7 +260,7 @@ function Details() {
             <Text>Original Paint</Text>
             <Box
               display={"inline-flex"}
-              borderRadius={"50%"}
+              borderRadius={0}
               w="30px"
               h="30px"
               mt="8px"

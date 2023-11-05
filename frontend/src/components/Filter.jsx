@@ -52,6 +52,7 @@ const Filter = ({ item }) => {
           onChange={debounce_search}
           name="model"
           type="search"
+          placeholder="Find a Car"
         />
         <InputRightElement h={"full"}>
           <Button bg="white" variant={"ghost"}>
