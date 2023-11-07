@@ -217,7 +217,7 @@ function LoginOption() {
         cursor={"pointer"}
         heading="logout"
       >
-        <AlertDialogExample />
+        {sessionStorage.getItem("username") && <AlertDialogExample />}
       </Flex>
     </Flex>
   );
